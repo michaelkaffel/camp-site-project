@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
 
+    <!-- <style>
+        * {border: 1px solid red}
+    </style> -->
+
     <title>Nucamp: A Better Way To Camp</title>
 </head>
 
@@ -25,10 +29,16 @@
     <!-- header -->
     <header>
         <div class="container">
-            <div class="row row-content align-items-center">
-                <div class="col">
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-6">
                     <h1>Nucamp</h1>
                     <h2>a better way to camp</h2>
+                </div>
+                <div class="col-md-4 col-xl-4 align-self-center d-flex justify-content-end">
+                    <a href="#reserveForm"><button class="btn bg-info mx-auto text-white">Reserve Campsite</button></a>
                 </div>
             </div>
         </div>
@@ -38,16 +48,20 @@
 
     <nav class="navbar navbar-expand-md navbar-dark sticky-top">
         <div class="container">
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                data-bs-target="#nucampNavbar">
+            <a class="navbar-branch" href="#"><img src="img/logo.png" height="30" width="30"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-house fa-lg"></i> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa-solid fa-info fa-lg"></i> About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa-solid fa-list fa-lg"></i> Sites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-address-card fa-lg"></i> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-house fa-lg"></i>
+                            Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa-solid fa-info fa-lg"></i>
+                            About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i
+                                class="fa-solid fa-list fa-lg"></i> Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-address-card fa-lg"></i>
+                            Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -62,22 +76,34 @@
                 <h2 class="text-sm-end">Discover & Review</h2>
             </div>
             <div class="col">
-                <h3>Our Campsites</h3>
-                <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own
-                    reviews!</p>
+                <div class="d-flex">
+                    <img class="me-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="breadbrumb trail">
+                    <div class="align-self-center">
+                        <h3>Our Campsites</h3>
+                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your
+                            own
+                            reviews!</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- feature section -->
         <section class="row row-content align-items-center">
-            <div class="col-sm-4 col-md-3">
-                <h2>Featured Campsites</h2>
+            <div class="col-sm-4 col-md-3 order-sm-first">
+                <h2 class="text-sm-start">Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the
-                    shores of the pristine React
-                    Lake is a favorite for fly fishers.</p>
+                <div class="d-flex">
+                    <div class="align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground
+                            on the
+                            shores of the pristine React
+                            Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img src="img/react-lake-thumb.jpg" class="thumbnail ms-3" alt="react lake" />
+                </div>
             </div>
         </section>
 
@@ -87,10 +113,65 @@
                 <h2 class="text-sm-end">Our Community Partners</h2>
             </div>
             <div class="col">
-                <h3>Bootstrap Outfitters</h3>
-                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't
-                    beat.</p>
+                <div class="d-flex">
+                    <img class="me-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters">
+                    <div class="align-self-center">
+                        <h3>Bootstrap Outfitters</h3>
+                        <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your
+                            own
+                            reviews!</p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section class="row row-content">
+            <div class="col-9 mx-auto">
+                <div class="card">
+                    <div class="card-header text-white bg-info">
+                        <h3>Reserve a Campsite</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <div class="row mb-3">
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="numberOfCampers">Number of Campers</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <select class="form-select" aria-label="Select" id="numberOfCampers"
+                                        name="numberOfCampers">
+                                        <option selected>Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="date">Date</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="date" id="date" name="date" value="2018-07-22"
+                                        min="2018-01-01" max="2026-12-31" />
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-auto">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+
         </section>
 
     </main>
