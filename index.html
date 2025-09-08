@@ -38,11 +38,63 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-md-4 col-xl-4 align-self-center d-flex justify-content-end">
-                    <a href="#reserveForm"><button class="btn bg-info mx-auto text-white">Reserve Campsite</button></a>
+                    <a href="#reserveForm"><button type="button" class="btn bg-info mx-auto text-white"
+                            data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Campsite</button></a>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Reservation Modal -->
+    <div class="modal fade" id="reserveModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h4 class="modal-title fs-5 bg-info text-white" id="exampleModalLabel">Reserve a Campsite</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="reserveForm" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+                            <div class="row mb-3">
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="numberOfCampers">Number of Campers</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <select class="form-select" aria-label="Select" id="numberOfCampers"
+                                        name="numberOfCampers">
+                                        <option selected>Select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-sm-6">
+                                    <label class="form-label" for="date">Date</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input class="form-control" type="date" id="date" name="date" value="mm/dd/yyyy"
+                                        min="2025-01-01" max="2030-12-31" />
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- nav bar -->
 
@@ -173,7 +225,9 @@
             </div>
         </section>
 
-        <section class="row row-content">
+
+
+        <!-- <section class="row row-content">
             <div class="col-9 mx-auto">
                 <div class="card">
                     <div class="card-header text-white bg-info">
@@ -210,7 +264,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-auto">
-                                <button type="submit" class="btn btn-primary">Search</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
                             </div>
                         </form>
@@ -220,7 +274,7 @@
             </div>
 
 
-        </section>
+        </section> -->
 
     </main>
 
