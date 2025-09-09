@@ -59,11 +59,10 @@ footer {
   background-color: #d3d3d3;
 }
 
-.carousel-caption {
-    background-color: $color-black-transparent;
-}
-.carousel {
-    border: solid $color-secondary;
-}
+
 
 @import 'modal';
+
+@import 'review-section';
+
+@import 'carousel';
